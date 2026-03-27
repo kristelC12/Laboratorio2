@@ -1,6 +1,12 @@
 body {
   background-color: #bad2cd80;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1 {
@@ -47,23 +53,23 @@ p {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: max-content;
-  height: max-content;
+  width: 100%;
+  max-width: 860px;
   background-color: transparent;
   margin: 0 auto;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  width: max-content;
-  height: max-content;
+  width: 100%;
+  max-width: 390px;
   background-color: transparent;
   margin: 0 auto;
   overflow: visible;
   padding-bottom: 36px;
-  padding-right: 10px;
+  padding-right: 0;
 }
 
 .container-sign {
@@ -71,8 +77,8 @@ p {
   display: flex;
   align-content: center;
   align-items: center;
-  width: 380px;
-  margin-right: 50px;
+  width: 100%;
+  margin-right: 0;
   height: max-content;
   border-bottom: 1px solid white;
   background-color: #005da4;
@@ -124,13 +130,15 @@ p {
 .container-posterheader {
   background-color: #fdb912;
   position: relative;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   height: 185px;
 }
 
 .container-posterbody {
   background-color: #fdb912;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   height: max-content;
   position: relative;
   display: flex;
@@ -272,8 +280,35 @@ p {
 .qr {
   font-size: 0.8em;
   width: 55px;
+  max-width: 55px;
   height: auto;
   display: block;
   margin: 0 auto;
   border: 2px solid #ffff;
+}
+
+@media (max-width: 860px) {
+  body {
+    padding: 10px;
+  }
+
+  .container-all {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .container {
+    max-width: 380px;
+    padding-bottom: 12px;
+  }
+
+  h1 {
+    margin-left: 16px;
+    margin-right: 12px;
+  }
+
+  .container-sign--curve h2 {
+    font-size: 2.2rem;
+  }
 }
